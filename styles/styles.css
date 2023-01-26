@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #332824;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #64514a;
+  border-radius: 24px;
+}
+
+.head-menu {
+  padding: 8px;
+  background-color: #2e1d1796;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.head-menu:hover {
+  transform: translateX(0);
+}
+
+.head-menu ul {
+  display: flex;
+  list-style-type: none;
+  width: 100vw;
+  justify-content: center;
+  gap: 30px;
+}
+
+.head-menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fefae0;
+  padding: 8px;
+  transition: background-color 0.25s ease-out;
+}
+
+.head-menu ul li a:hover {
+  background-color: #64514a;
+}
+
+.head-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background-color: #FEFAE0; */
+  background-image: url(../assets/studio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+:where(.head-hello, .head-description) {
+  text-transform: uppercase;
+  color: #FFAD7E;
+}
+
+.head-title-box {
+  padding: 0 10px;
+  border-radius: 5px;
+  transition: transform 0.25s, opacity 400ms;
+  cursor: default;
+  background-color: #10344280;
+}
+
+.head-title-box:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.head-hello {
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+
+.head-description {
+  font-weight: 300;
+  letter-spacing: 3px;
+  font-size: 1.8rem;
+}
+
+.presentation-container {
+  background-color: #103341;
+  color: #FFAD7E;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: justify;
+  padding: 70px 0;
+  height: 100vh;
+  gap: 30px;
+}
+
+#presentation img {
+  width: 300px;
+}
+
+.presentation-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 7px;
+}
+
+.presentation-description {
+  max-width: 650px;
+  width: 100%;
+}
+
+.main-container {
+  text-align: center;
+  background-color: #9AA4A6;
+  color: #103341;
+  padding: 70px 0;
+  height: 100vh;
+}
+
+.main-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 3rem;
+  letter-spacing: 7px;
+  margin-bottom: 30px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header"
+    "html css js";
+  justify-items: stretch;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+.main-card {
+  grid-area: header;
+  border-bottom: 1px solid #61616133;
+  padding: 30px;
+}
+
+.main-card img {
+  width: 50px;
+}
+
+.main-languages {
+  padding: 30px;
+  height: 400px;
+}
+
+:where(#resHtml, #resCss, #resJs) {
+  text-align: left;
+}
+
+:where(.html-hover, .css-hover, .js-hover) {
+  margin-bottom: 15px;
+}
+
+.main-languages img {
+  width: 50px;
+}
+
+.html {
+  grid-area: html;
+  border-right: 1px solid #61616133;
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.css {
+  grid-area: css;
+  border-right: 1px solid #61616133;
+}
+
+.js {
+  grid-area: js;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-top: 15px;
+}
+
+.projects-container {
+  padding-bottom: 80px;
+  background-color: #103341;
+  color: #FFAD7E;
+}
+
+.projects-title {
+  padding: 80px 80px 0px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+
+.projects-card {
+  height: 200px;
+  border: 1px solid #385C68;
+  display: flex;
+  margin: 40px 80px;
+}
+
+.projects-card img {
+  height: 198px;
+}
+
+.projects-card-center {
+  padding: 25px;
+}
+
+.projects-card-content {
+  padding: 14px 0;
+}
+
+.projects-link:visited {
+  color: #FFAD7E;
+}
+
+.projects-link {
+  text-decoration: none;
+}
+
+.projects-link:hover {
+  text-decoration: underline;
+}
