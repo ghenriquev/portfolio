@@ -80,7 +80,7 @@ body::-webkit-scrollbar-thumb {
 
 :where(.head-hello, .head-description) {
   text-transform: uppercase;
-  color: #FFAD7E;
+  color: #ffad7e;
 }
 
 .head-title-box {
@@ -109,7 +109,7 @@ body::-webkit-scrollbar-thumb {
 
 .presentation-container {
   background-color: #103341;
-  color: #FFAD7E;
+  color: #ffad7e;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -120,7 +120,7 @@ body::-webkit-scrollbar-thumb {
   gap: 30px;
 }
 
-#presentation img {
+#presentation > img {
   width: 300px;
 }
 
@@ -136,9 +136,25 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
+.presentation-social {
+  display: flex;
+  justify-content: space-around;
+  width: 160px;
+}
+
+.presentation-social a img {
+  width: 40px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.presentation-social a img:hover {
+  filter: grayscale(0%);
+}
+
 .main-container {
   text-align: center;
-  background-color: #9AA4A6;
+  background-color: #9aa4a6;
   color: #103341;
   padding: 70px 0;
   height: 100vh;
@@ -183,7 +199,6 @@ body::-webkit-scrollbar-thumb {
 :where(#resHtml, #resCss, #resJs) {
   text-align: left;
 }
-
 :where(.html-hover, .css-hover, .js-hover) {
   margin-bottom: 15px;
 }
@@ -223,7 +238,7 @@ body::-webkit-scrollbar-thumb {
 .projects-container {
   padding-bottom: 80px;
   background-color: #103341;
-  color: #FFAD7E;
+  color: #ffad7e;
 }
 
 .projects-title {
@@ -234,7 +249,7 @@ body::-webkit-scrollbar-thumb {
 
 .projects-card {
   height: 200px;
-  border: 1px solid #385C68;
+  border: 1px solid #385c68;
   display: flex;
   margin: 40px 80px;
 }
@@ -252,13 +267,34 @@ body::-webkit-scrollbar-thumb {
 }
 
 .projects-link:visited {
-  color: #FFAD7E;
+  color: #ffad7e;
 }
 
 .projects-link {
   text-decoration: none;
+  display: inline-block;
 }
 
-.projects-link:hover {
-  text-decoration: underline;
+.projects-link::after {
+  content: "";
+  height: 1px;
+  background-color: #ffad7e;
+  display: block;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: 0.3s ease-in-out;
+}
+
+.projects-link:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.contact {
+  background-color: #59372c;
+  color: #9aa4a6;
+}
+
+.contact-description {
+  padding: 15px 80px;
 }
