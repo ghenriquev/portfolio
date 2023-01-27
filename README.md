@@ -13,7 +13,7 @@ Esse é o meu Portfólio, que inclui os meus principais projetos e tecnologias q
 <br>
 
 <p align="center">
-  <img alt="projeto Habits" src="./assets/portfolio.png" width="100%">
+  <img alt="Imagem Home Portfolio" src="./assets/portfolio.PNG" width="75%" height="75%">
 </p>
 
 ## 🚀 Tecnologias
