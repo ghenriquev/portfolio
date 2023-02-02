@@ -189,6 +189,7 @@ body::-webkit-scrollbar-thumb {
 
 .main-card img {
   width: 50px;
+  transform: translateY(-50%);
 }
 
 .main-languages {
@@ -199,6 +200,26 @@ body::-webkit-scrollbar-thumb {
 :where(#resHtml, #resCss, #resJs) {
   text-align: left;
 }
+
+.card-hover {
+  transform: translateY(100%);
+  transition: transform 0.1s ease-out;
+}
+
+.card-hover:hover {
+  transform: translateY(0)
+}
+
+#resHtml{
+  display: none;
+  transition: display 0.3s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+#resHtml:hover {
+  display: block;
+}
+
 :where(.html-hover, .css-hover, .js-hover) {
   margin-bottom: 15px;
 }
