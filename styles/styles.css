@@ -189,55 +189,59 @@ body::-webkit-scrollbar-thumb {
 
 .main-card img {
   width: 50px;
-  transform: translateY(-50%);
 }
 
 .main-languages {
   padding: 30px;
   height: 400px;
-}
-
-:where(#resHtml, #resCss, #resJs) {
-  text-align: left;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-hover {
-  transform: translateY(100%);
-  transition: transform 0.1s ease-out;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
 }
 
-.card-hover:hover {
-  transform: translateY(0)
-}
-
-#resHtml{
-  display: none;
-  transition: display 0.3s ease-in-out;
-  transition-delay: 0.5s;
-}
-
-#resHtml:hover {
-  display: block;
-}
-
-:where(.html-hover, .css-hover, .js-hover) {
-  margin-bottom: 15px;
-}
-
-.main-languages img {
+.card-icon {
   width: 50px;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-top: 15px;
+}
+
+.card-text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  text-align: left;
+  padding: 0 30px;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out, opacity 1s ease 1s;
+}
+
+.main-languages:hover .card-hover {
+  transform: translateY(-50%);
+  top: 50px;
+}
+
+.main-languages:hover .card-text {
+  transform: translateY(40%);
+  opacity: 1;
 }
 
 .html {
   grid-area: html;
   border-right: 1px solid #61616133;
-}
-
-.center-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25px;
 }
 
 .css {
@@ -247,13 +251,6 @@ body::-webkit-scrollbar-thumb {
 
 .js {
   grid-area: js;
-}
-
-.card-title {
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 3px;
-  margin-top: 15px;
 }
 
 .projects-container {
