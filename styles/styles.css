@@ -37,7 +37,7 @@ body::-webkit-scrollbar-thumb {
   padding: 8px;
   background-color: #2e1d1796;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   width: 100%;
 }
 
@@ -305,11 +305,40 @@ body::-webkit-scrollbar-thumb {
   transform: scaleX(1);
 }
 
-.contact {
+#contact {
   background-color: #59372c;
   color: #9aa4a6;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.contact-description {
-  padding: 15px 80px;
+.contact-header {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+
+}
+
+.contact-form fieldset {
+  border: none;
+
+}
+
+.form-field{
+  background-color: transparent;
+  margin: 16px;
+  border-bottom: solid 1px #9aa4a6;
+}
+
+.form-field input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.form-field textarea {
+  background-color: transparent;
+  border: none;
 }

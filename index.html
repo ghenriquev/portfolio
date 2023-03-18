@@ -23,6 +23,7 @@
         <li><a href="#presentation">Sobre Mim</a></li>
         <li><a href="#services">Tecnologias</a></li>
         <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
 
@@ -185,9 +186,54 @@
       </div>
     </section>
 
-    <footer class="contact">
-      <div class="contact-description">
-        <p>Created by Gabriel Henrique 🧑🏻</p>
+    <footer id="contact">
+      <div class="contact-header">
+        <h2>Contato</h2>
+      </div>
+      <div class="contact-form">
+        <form action="https://hotmail.us14.list-manage.com/subscribe/post?u=de7e1b5377d183c7f050208d7&amp;id=5957b37ce3&amp;f_id=00daf7e0f0" method="post">
+          <fieldset>
+            <div class="form-field">
+              <input
+                type="text"
+                name="contactName"
+                id="contactName"
+                placeholder="Nome *"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <input
+                type="email"
+                name="contactEmail"
+                id="contactEmail"
+                placeholder="Email *"
+                pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <input
+                type="text"
+                name="contactSubject"
+                id="contactSubject"
+                placeholder="Assunto"
+              />
+            </div>
+            <div class="form-field">
+              <textarea
+                name="contactMessage"
+                id="contactMessage"
+                cols="20"
+                rows="10"
+                placeholder="Mensagem *"
+                required
+              ></textarea>
+            </div>
+          </fieldset>
+        </form>
       </div>
     </footer>
 
