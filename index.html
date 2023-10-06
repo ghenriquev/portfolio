@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,224 +17,147 @@
     />
   </head>
   <body>
-    <nav class="head-menu">
+    <nav id="head">
+      <a href="#"><img class="home-img" src="./assets/home.png" alt="" /></a>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#presentation">Sobre Mim</a></li>
-        <li><a href="#services">Tecnologias</a></li>
+        <li><a href="#about">Sobre Mim</a></li>
         <li><a href="#projects">Projetos</a></li>
         <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
 
-    <header id="home" class="head-container">
-      <div class="head-title">
-        <div class="head-title-box">
-          <h1 class="head-hello">Gabriel Henrique</h1>
-          <h2 class="head-description">Front-end developer</h2>
+    <header id="home">
+      <div class="presentation-container">
+        <div class="presentation-text">
+          <div class="presentation-title">
+            <h1 class="presentation-hello">Olá, eu sou</h1>
+            <h2 class="presentation-name">Gabriel Henrique</h2>
+          </div>
+          <div class="presentation-description">Desenvolvedor Front-End</div>
+          <div class="presentation-social">
+            <a href="https://www.github.com/ghenriquev" target="_blank"
+              ><img src="./assets/github.png" alt="Logo GitHub"
+            /></a>
+            <a href="https://www.linkedin.com/in/ghenriquev" target="_blank"
+              ><img src="./assets/linkedin.png" alt="Logo Linkedin"
+            /></a>
+            <a href="mailto:gabriel.emv@hotmail.com" target="_blank"
+              ><img src="./assets/outlook.png" alt="Logo Outlook"
+            /></a>
+          </div>
+        </div>
+
+        <div class="presentation-img">
+          <img src="./assets/me.png" alt="Foto de Gabriel Henrique" />
         </div>
       </div>
     </header>
 
-    <div id="presentation"></div>
-    <section id="presentation" class="presentation-container">
-      <img src="./assets/eu.png" alt="Foto de Gabriel Henrique" />
-
-      <p class="presentation-title">Olá Mundo!</p>
-      <p class="presentation-description">
-        Tenho 21 anos, moro em São Paulo e sou um profissional comprometido,
-        proativo e comunicativo. Estudo Análise e Desenvolvimento de Sistemas na
-        Faculdade Descomplica e sou um Desenvolvedor Front-End com conhecimentos
-        em HTML, CSS, JavaScript, Git e Node.js e com objetivo em me tornar um
-        Desenvolvedor Full Stack.
-      </p>
-      <div class="presentation-social">
-        <a href="https://www.github.com/ghenriquev" target="_blank"
-          ><img src="./assets/github.png" alt="Logo GitHub"
-        /></a>
-        <a href="https://www.linkedin.com/in/ghenriquev" target="_blank"
-          ><img src="./assets/linkedin.png" alt="Logo Linkedin"
-        /></a>
-        <a href="https://www.instagram.com/ghenriquev" target="_blank"
-          ><img src="./assets/instagram.png" alt="Logo Instagram"
-        /></a>
-        <a href="mailto:gabriel.emv@hotmail.com" target="_blank"
-          ><img src="./assets/outlook.png" alt="Logo Outlook"
-        /></a>
+    <section id="about">
+      <div class="about-description">
+        <h2 class="about-title">Sobre mim</h2>
+        <p class="about-text">
+          Sou o Gabriel, tenho 22 anos e moro em Rosário, na Argentina. Sou
+          casado, cristão, formado em Técnico em Mecatrônica e Mecânica Geral
+          pelo SENAI VW, e atualmente curso o segundo período de Análise e
+          Desenvolvimento de Sistemas pela Faculdade Descomplica. Trabalhei
+          durante 5 anos na Volkswagen do Brasil, sendo 2 como aprendiz e 3 como
+          efetivo. Em 2022, movido pela paixão pela tecnologia, dediquei todo o
+          ano ao estudo intensivo de programação. Agora, em 2023, essa
+          experiência me inspirou a abraçar um novo desafio: tornar-me um
+          Desenvolvedor. Então decidi encerrar meu ciclo na Volkswagen para me
+          dedicar totalmente à transição de carreira.
+        </p>
+      </div>
+      <div class="about-techs">
+        <div class="about-buttons">
+          <button class="about-button techs">
+            <p class="text-light text-white-hover text-white">Tecnologias</p>
+            <div class="show-blw-line"></div>
+          </button>
+          <button class="about-button education">
+            <p class="text-light text-white-hover">Educação</p>
+            <div class="hide-blw-line"></div>
+          </button>
+        </div>
+        <div class="about-fill">
+          <ul class="about-list">
+            <li class="tech-li">
+              <span>HTML</span
+              ><img src="./assets/html-5.png" alt="HTML5-Logo" />
+            </li>
+            <li class="tech-li">
+              <span>CSS</span><img src="./assets/css-3.png" alt="CSS3-Logo" />
+            </li>
+            <li class="tech-li">
+              <span>Javascript (ES6)</span
+              ><img src="./assets/js.png" alt="Javascript-Logo" />
+            </li>
+            <li class="tech-li">
+              <span>jQuery</span
+              ><img src="./assets/jquery.png" alt="jQuery-Logo" />
+            </li>
+            <li class="tech-li">
+              <span>GitHub</span
+              ><img src="./assets/github2.png" alt="Github-Logo" />
+            </li>
+            <li class="tech-li">
+              <span>Git</span><img src="./assets/git.png" alt="Git-Logo" />
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <main id="services" class="main-container">
-      <h2 class="main-title">Tecnologias</h2>
-
-      <div class="main-grid">
-        <div class="main-card">
-          <img
-            src="./assets/html.png"
-            alt="Logo com uma tag"
-            class="card-icon"
-          />
-          <h2 class="card-title">Desenvolvimento Front-End</h2>
-        </div>
-
-        <div class="main-languages html">
-          <div class="card-hover">
-            <img
-              src="./assets/html-5.png"
-              alt="Logo HTML 5"
-              class="card-icon"
-            />
-            <h2 class="card-title">HTML 5</h2>
-          </div>
-
-          <div class="card-text">
-            <p>
-              A Linguagem de Marcação de Hipertexto (HTML) é uma linguagem de
-              computador que compõe a maior parte das páginas da internet e dos
-              aplicativos online.
-            </p>
-          </div>
-        </div>
-
-        <div class="main-languages css">
-          <div class="card-hover">
-            <img src="./assets/css-3.png" alt="Logo CSS 3" class="card-icon" />
-            <h2 class="card-title">CSS 3</h2>
-          </div>
-
-          <div class="card-text">
-            <p>
-              CSS é uma linguagem de folha de estilo composta por camadas,
-              criada com propósito de estilizar as páginas HTML.
-            </p>
-          </div>
-        </div>
-
-        <div class="main-languages js">
-          <div class="card-hover">
-            <img
-              src="./assets/js.png"
-              alt="Logo JavaScript"
-              class="card-icon"
-            />
-            <h2 class="card-title">JavaScript</h2>
-          </div>
-
-          <div class="card-text">
-            <p>
-              JavaScript é uma linguagem de programação interpretada
-              estruturada, de script em alto nível com tipagem dinâmica fraca e
-              multiparadigma.
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <section id="projects" class="projects-container">
+    <section id="projects">
       <h2 class="projects-title">Meus projetos</h2>
 
-      <div class="projects-card">
-        <img src="./assets/habits.PNG" alt="Imagem do projeto Habits" />
-        <div class="projects-card-center">
-          <h2 class="projects-card-title">Habits</h2>
-          <p class="projects-card-content">
-            Projeto realizado durante a NLW Setup da Rocketseat.
-          </p>
-          <a
-            href="https://ghenriquev.github.io/NLWSetup/"
-            class="projects-link"
-            target="_blank"
-            >🔗 Clique aqui para ir ao site.</a
-          >
-        </div>
-      </div>
-
-      <div class="projects-card">
-        <img src="./assets/ouse.PNG" alt="Imagem do projeto Ouse Barbearia" />
-        <div class="projects-card-center">
-          <h2 class="projects-card-title">Ouse Barbearia</h2>
-          <p class="projects-card-content">
-            Projeto de um site para uma barbearia da minha cidade.
-          </p>
-          <a
-            href="https://ghenriquev.github.io/ouse_barbearia/"
-            class="projects-link"
-            target="_blank"
-            >🔗 Clique aqui para ir ao site.</a
-          >
-        </div>
-      </div>
-
-      <div class="projects-card">
-        <img
-          src="./assets/churrascometro.PNG"
-          alt="Imagem do projeto Churrascometro"
-        />
-        <div class="projects-card-center">
-          <h2 class="projects-card-title">Churrascômetro</h2>
-          <p class="projects-card-content">
-            Projeto de um churrascômetro para organização do seu churrasco.
-          </p>
-          <a
-            href="https://ghenriquev.github.io/churrascometro/"
-            class="projects-link"
-            target="_blank"
-            >🔗 Clique aqui para ir ao site.</a
-          >
-        </div>
+      <div class="projects-grid">
+        <div class="projects-card"></div>
+        <div class="projects-card"></div>
+        <div class="projects-card"></div>
+        <div class="projects-card"></div>
+        <div class="projects-card"></div>
+        <div class="projects-card"></div>
       </div>
     </section>
 
-    <footer id="contact">
-      <div class="contact-header">
-        <h2>Contato</h2>
+    <section id="contact">
+      <div class="contact-text">
+        <h3>Vamos nos conectar</h3>
+        <p>
+          Em busca de novas oportunidades profissionais, estou pronto para
+          enfrentar desafios e contribuir de forma significativa para equipes
+          inovadoras. Estou comprometido em alcançar resultados excepcionais.
+          Vamos juntos em direção ao sucesso? Entre em contato!
+        </p>
+        <ul>
+          <li>
+            <a href="https://github.com/ghenriquev"
+              ><img class="half-opacity" src="./assets/github3.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ghenriquev/"
+              ><img class="half-opacity" src="./assets/linkedin2.png" alt=""
+            /></a>
+          </li>
+        </ul>
       </div>
-      <div class="contact-form">
-        <form action="https://hotmail.us14.list-manage.com/subscribe/post?u=de7e1b5377d183c7f050208d7&amp;id=5957b37ce3&amp;f_id=00daf7e0f0" method="post">
-          <fieldset>
-            <div class="form-field">
-              <input
-                type="text"
-                name="contactName"
-                id="contactName"
-                placeholder="Nome *"
-                required
-              />
-            </div>
-
-            <div class="form-field">
-              <input
-                type="email"
-                name="contactEmail"
-                id="contactEmail"
-                placeholder="Email *"
-                pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b"
-                required
-              />
-            </div>
-
-            <div class="form-field">
-              <input
-                type="text"
-                name="contactSubject"
-                id="contactSubject"
-                placeholder="Assunto"
-              />
-            </div>
-            <div class="form-field">
-              <textarea
-                name="contactMessage"
-                id="contactMessage"
-                cols="20"
-                rows="10"
-                placeholder="Mensagem *"
-                required
-              ></textarea>
-            </div>
-          </fieldset>
-        </form>
+      <div class="contact-button">
+        <a
+          href="https://api.whatsapp.com/send?phone=543417200911"
+          target="_blank"
+          ><img src="./assets/whatsapp.png" alt=""
+        /></a>
       </div>
+    </section>
+
+    <footer>
+      <div>
+        <a href="#"><img class="home-img" src="./assets/home.png" alt="" /></a>
+      </div>
+      <div>Gabriel Henrique</div>
     </footer>
 
     <script src="./js/script.js"></script>
