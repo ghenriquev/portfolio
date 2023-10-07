@@ -27,12 +27,29 @@ function changeAboutFill() {
   if (button.classList.contains('techs')) {
     console.log('Techs clicked')
     aboutList.innerHTML =
-      '<li class="tech-li"><span>HTML</span><img src="./assets/html-5.png" alt="HTML5-Logo" /></li><li class="tech-li"><span>CSS</span><img src="./assets/css-3.png" alt="CSS3-Logo" /></li><li class="tech-li"><span>Javascript (ES6)</span><img src="./assets/js.png" alt="Javascript-Logo" /></li><li class="tech-li"><span>jQuery</span><img src="./assets/jquery.png" alt="jQuery-Logo" /></li><li class="tech-li"><span>GitHub</span><img src="./assets/github2.png" alt="Github-Logo" /></li><li class="tech-li"><span>Git</span><img src="./assets/git.png" alt="Git-Logo" /></li>';
+      '<li class="tech-li"><img src="./assets/html-5.png" alt="HTML5-Logo" /></li><li class="tech-li"><img src="./assets/css-3.png" alt="CSS3-Logo" /></li><li class="tech-li"><img src="./assets/js.png" alt="Javascript-Logo" /></li><li class="tech-li"><img src="./assets/jquery.png" alt="jQuery-Logo" /></li><li class="tech-li"><img src="./assets/github2.png" alt="Github-Logo" /></li><li class="tech-li"><img src="./assets/git.png" alt="Git-Logo" /></li>';
   }
 
   if (button.classList.contains('education')) {
     console.log('Educations clicked');
     aboutList.innerHTML =
-      '<li class="edu-li">Análise e Desenvolvimento de Sistemas <span class="xs-text">(Jan, 2023 - Jul, 2025)</span><br><span class="xs-text ml-75">Faculdade Descomplica - <strong>Cursando</strong></span></li>';
+      '<li class="edu-li">Análise e Desenvolvimento de Sistemas<br><span class="xs-text ml-3">Faculdade Descomplica - <strong>Cursando</strong></span><br><span class="xs-text ml-3">(Jan, 2023 - Jul, 2025)</span></li>';
   }
 }
+
+let presentationText = document.querySelector('.presentation-text');
+let presentationImg = document.querySelector('.presentation-img')
+
+const observer = new IntersectionObserver((entries) => {
+  for(entry of entries){
+    const intersecting = entry.isIntersecting;
+    console.log(entry);
+    if (intersecting) {
+      entry.target.classList.remove('scale-50');
+      entry.target.classList.add('scale-100');
+    }
+  }
+})
+
+observer.observe(presentationText);
+observer.observe(presentationImg);
