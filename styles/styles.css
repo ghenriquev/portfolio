@@ -332,6 +332,10 @@ section#projects {
   height: 300px;
 }
 
+.projects-card img {
+  width: 100%;
+}
+
 #contact {
   background-color: var(--nav-bg);
   color: var(--text);
