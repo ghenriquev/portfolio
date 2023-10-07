@@ -112,10 +112,22 @@ header {
   margin-top: var(--nav-height);
 }
 
+.scale-50 {
+  transform: scale(50%);
+  opacity: 0%;
+}
+
+.scale-100 {
+  transform: scale(100%);
+  opacity: 100%;
+  transition: all 300ms ease-in-out;
+}
+
 .presentation-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  
 }
 
 .presentation-text {
@@ -146,7 +158,7 @@ header {
 }
 
 .presentation-img > img {
-  width: 30rem;
+  width: 35rem;
   display: block;
 }
 
@@ -180,8 +192,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
   gap: 3rem;
+  width: 60%;
 }
 
 .about-title {
@@ -197,16 +209,16 @@ header {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 40%;
+  width: 35%;
 }
 
-.about-techs .about-buttons {
+.about-buttons {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
 
-.about-techs .about-buttons button {
+.about-buttons button {
   background-color: var(--nav-bg);
   border: none;
   font-size: 1.6rem;
@@ -254,36 +266,38 @@ header {
 }
 
 .about-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2.4rem;
-  flex-wrap: wrap;
   width: 100%;
+  display: grid;
+  column-gap: 1rem;
+  row-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  justify-content: center;
 }
 
 .tech-li {
   list-style-type: none;
-  font-size: 1.6rem;
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: start;
-  gap: 1rem;
+  justify-content: center;
+  border: 2px solid var(--border-c);
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #1a1a1a;
+}
+
+.tech-li img {
+  width: 60px;
+  display: block;
 }
 
 .edu-li {
-  list-style-type: none;
   font-size: 1.6rem;
+  list-style-position: inside;
 }
 
-.ml-75 {
-  margin-left: 0.75rem;
-}
-
-.about-list li img {
-  width: 30px;
-  display: block;
+.ml-3 {
+  margin-left: 3rem;
 }
 
 .xs-text {
