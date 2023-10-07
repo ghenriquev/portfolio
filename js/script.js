@@ -25,7 +25,7 @@ function changeAboutFill() {
   actualBelowLine.classList.add('show-blw-line');
 
   if (button.classList.contains('techs')) {
-    console.log('Techs clicked')
+    console.log('Techs clicked');
     aboutList.innerHTML =
       '<li class="tech-li"><img src="./assets/html-5.png" alt="HTML5-Logo" /></li><li class="tech-li"><img src="./assets/css-3.png" alt="CSS3-Logo" /></li><li class="tech-li"><img src="./assets/js.png" alt="Javascript-Logo" /></li><li class="tech-li"><img src="./assets/jquery.png" alt="jQuery-Logo" /></li><li class="tech-li"><img src="./assets/github2.png" alt="Github-Logo" /></li><li class="tech-li"><img src="./assets/git.png" alt="Git-Logo" /></li>';
   }
@@ -37,11 +37,11 @@ function changeAboutFill() {
   }
 }
 
-let presentationText = document.querySelector('.presentation-text');
-let presentationImg = document.querySelector('.presentation-img')
+const presentationText = document.querySelector('.presentation-text');
+const presentationImg = document.querySelector('.presentation-img');
 
-const observer = new IntersectionObserver((entries) => {
-  for(entry of entries){
+const headerObserver = new IntersectionObserver((entries) => {
+  for (entry of entries) {
     const intersecting = entry.isIntersecting;
     console.log(entry);
     if (intersecting) {
@@ -49,7 +49,12 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add('scale-100');
     }
   }
-})
+});
 
-observer.observe(presentationText);
-observer.observe(presentationImg);
+headerObserver.observe(presentationText);
+headerObserver.observe(presentationImg);
+
+const aboutDescription = document.querySelector(".about-description");
+const aboutTechs = document.querySelector('.about-techs');
+
+const aboutObserver = new IntersectionObserver((entries) => {});
