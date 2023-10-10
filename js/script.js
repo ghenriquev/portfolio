@@ -54,7 +54,7 @@ const headerObserver = new IntersectionObserver((entries) => {
 headerObserver.observe(presentationText);
 headerObserver.observe(presentationImg);
 
-const aboutDescription = document.querySelector(".about-description");
+const aboutDescription = document.querySelector('.about-description');
 const aboutTechs = document.querySelector('.about-techs');
 
 const aboutObserver = new IntersectionObserver((entries) => {});
