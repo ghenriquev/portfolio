@@ -327,13 +327,87 @@ section#projects {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.projects-card {
+/* .projects-card {
   border: 1px solid var(--border-c);
-  height: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+} */
+
+.border-radius-above {
+  border-radius: 20px 20px 0 0;
 }
 
-.projects-card img {
+.border-radius-below {
+  border-radius: 0 0 20px 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-img {
+  background-image: url(../assets/habits.PNG);
+  height: 25rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-overlay {
   width: 100%;
+  height: 100%;
+  background-color: #1a1a1a80;
+}
+
+.overlay-img {
+  border: 2px solid var(--text);
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 50%;
+  opacity: 50%;
+  transition: opacity 300ms;
+}
+
+.overlay-img:hover {
+  opacity: 1;
+}
+
+.overlay-img img {
+  width: 40px;
+  display: block;
+}
+
+/* .card-img img {
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
+} */
+
+.card-description {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #1a1a1a;
+}
+
+.card-description h5 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.card-description p {
+  font-size: 1.4rem;
+  font-weight: 300;
 }
 
 #contact {
