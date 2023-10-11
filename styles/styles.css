@@ -375,6 +375,10 @@ section#projects {
   background-image: url(../assets/churrascometro.PNG);
 }
 
+.jogo-memoria {
+  background-image: url(../assets/jogo-memoria.png);
+}
+
 .card-img {
   height: 25rem;
   background-size: cover;
