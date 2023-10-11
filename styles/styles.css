@@ -379,6 +379,14 @@ section#projects {
   background-image: url(../assets/jogo-memoria.png);
 }
 
+.calculadora {
+  background-image: url(../assets/calculadora.png);
+}
+
+.login-form {
+  background-image: url(../assets/loginform.png);
+}
+
 .card-img {
   height: 25rem;
   background-size: cover;
