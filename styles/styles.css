@@ -358,8 +358,11 @@ section#projects {
   background-image: url(../assets/habits.PNG);
 }
 
+.ouse {
+  background-image: url(../assets/ouse.PNG);
+}
+
 .card-img {
-  /* background-image: url(../assets/habits.PNG); */
   height: 25rem;
   background-size: cover;
   background-repeat: no-repeat;
