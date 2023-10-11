@@ -43,7 +43,6 @@ const presentationImg = document.querySelector('.presentation-img');
 const headerObserver = new IntersectionObserver((entries) => {
   for (entry of entries) {
     const intersecting = entry.isIntersecting;
-    console.log(entry);
     if (intersecting) {
       entry.target.classList.remove('scale-50');
       entry.target.classList.add('scale-100');
@@ -57,7 +56,19 @@ headerObserver.observe(presentationImg);
 const aboutDescription = document.querySelector('.about-description');
 const aboutTechs = document.querySelector('.about-techs');
 
-const aboutObserver = new IntersectionObserver((entries) => {});
+const aboutObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry.isIntersecting);
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('from-left');
+      entry.target.classList.remove('from-right');
+      entry.target.classList.add('show');
+    }
+  });
+}, {rootMargin: '-200px'});
+
+aboutObserver.observe(aboutTechs);
+aboutObserver.observe(aboutDescription);
 
 const cardImages = document.querySelectorAll('.card-img');
 
