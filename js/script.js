@@ -59,16 +59,18 @@ const aboutTechs = document.querySelector('.about-techs');
 
 const aboutObserver = new IntersectionObserver((entries) => {});
 
-const cardImage = document.querySelector('.card-img');
+const cardImages = document.querySelectorAll('.card-img');
 
-cardImage.addEventListener('mouseenter', (e) => {
-  const cardOverlay = e.target.children[0];
-  cardOverlay.classList.remove('hidden');
-  cardOverlay.classList.add('flex');
+cardImages.forEach((cardImage) => {
+  cardImage.addEventListener('mouseenter', (e) => {
+    const cardOverlay = e.target.children[0];
+    cardOverlay.classList.remove('hidden');
+    cardOverlay.classList.add('flex');
+  });
+
+  cardImage.addEventListener('mouseleave', (e) => {
+    const cardOverlay = e.target.children[0];
+    cardOverlay.classList.remove('flex');
+    cardOverlay.classList.add('hidden');
+  });
 });
-
-cardImage.addEventListener('mouseleave', (e) => {
-  const cardOverlay = e.target.children[0];
-  cardOverlay.classList.remove('flex');
-  cardOverlay.classList.add('hidden');
-})

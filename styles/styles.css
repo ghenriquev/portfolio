@@ -354,8 +354,12 @@ section#projects {
   gap: 1rem;
 }
 
-.card-img {
+.habits {
   background-image: url(../assets/habits.PNG);
+}
+
+.card-img {
+  /* background-image: url(../assets/habits.PNG); */
   height: 25rem;
   background-size: cover;
   background-repeat: no-repeat;
