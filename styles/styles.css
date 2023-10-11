@@ -362,6 +362,10 @@ section#projects {
   background-image: url(../assets/ouse.PNG);
 }
 
+.churrascometro {
+  background-image: url(../assets/churrascometro.PNG);
+}
+
 .card-img {
   height: 25rem;
   background-size: cover;
