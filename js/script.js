@@ -56,16 +56,19 @@ headerObserver.observe(presentationImg);
 const aboutDescription = document.querySelector('.about-description');
 const aboutTechs = document.querySelector('.about-techs');
 
-const aboutObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry.isIntersecting);
-    if (entry.isIntersecting) {
-      entry.target.classList.remove('from-left');
-      entry.target.classList.remove('from-right');
-      entry.target.classList.add('show');
-    }
-  });
-}, {rootMargin: '-200px'});
+const aboutObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('from-left');
+        entry.target.classList.remove('from-right');
+        entry.target.classList.add('show');
+      }
+    });
+  },
+  { rootMargin: '-200px' }
+);
 
 aboutObserver.observe(aboutTechs);
 aboutObserver.observe(aboutDescription);
@@ -84,4 +87,21 @@ cardImages.forEach((cardImage) => {
     cardOverlay.classList.remove('flex');
     cardOverlay.classList.add('hidden');
   });
+});
+
+const projectsCard = document.querySelectorAll('.projects-card');
+const projectsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('projects-hidden');
+        entry.target.classList.add('projects-show');
+      }
+    });
+  },
+  { rootMargin: '-50px' }
+);
+
+projectsCard.forEach((card) => {
+  projectsObserver.observe(card);
 });
