@@ -587,7 +587,7 @@ footer {
 
 @media (max-width: 601px) {
   html {
-    font-size: 40%;
+    font-size: 45%;
   }
 
   #head {
@@ -634,6 +634,14 @@ footer {
     width: 100%;
     align-items: center;
     justify-content: center;
+  }
+
+  .presentation-hello {
+    font-size: 6rem;
+  }
+
+  .presentation-name {
+    font-size: 4rem;
   }
 
   #projects {
