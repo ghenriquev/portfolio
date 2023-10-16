@@ -73,10 +73,12 @@ aboutObserver.observe(aboutDescription);
 const cardImages = document.querySelectorAll('.card-img');
 
 cardImages.forEach((cardImage) => {
-  cardImage.addEventListener('mouseenter', (e) => {
-    const cardOverlay = e.target.children[0];
-    cardOverlay.classList.remove('hidden');
-    cardOverlay.classList.add('flex');
+  ['click', 'mouseenter'].forEach((event) => {
+    cardImage.addEventListener(event, (e) => {
+      const cardOverlay = e.target.children[0];
+      cardOverlay.classList.remove('hidden');
+      cardOverlay.classList.add('flex');
+    });
   });
 
   cardImage.addEventListener('mouseleave', (e) => {
@@ -127,4 +129,4 @@ homeButton.addEventListener('click', () => {
   if (getComputedStyle(mobileOptions).display === 'block') {
     mobileOptions.style.display = 'none';
   }
-})
+});
