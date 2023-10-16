@@ -54,7 +54,6 @@ nav {
   position: fixed;
   width: 100%;
   background-color: var(--nav-bg);
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,7 +71,7 @@ nav a {
 }
 
 .home-img {
-  width: 30px;
+  width: 4rem;
   display: block;
 }
 
@@ -90,7 +89,7 @@ nav a {
 }
 
 .mobile-menu-button img {
-  width: 40px;
+  width: 5rem;
   display: block;
 }
 
@@ -225,7 +224,7 @@ header {
 }
 
 .presentation-social a img {
-  width: 35px;
+  width: 3.5rem;
   filter: grayscale(100%);
   transition: filter 0.3s;
 }
@@ -328,7 +327,7 @@ header {
   display: grid;
   column-gap: 1rem;
   row-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   justify-content: center;
 }
 
@@ -345,7 +344,7 @@ header {
 }
 
 .tech-li img {
-  width: 60px;
+  width: 6rem;
   display: block;
 }
 
@@ -482,7 +481,7 @@ section#projects {
 }
 
 .overlay-img img {
-  width: 40px;
+  width: 4rem;
   display: block;
 }
 
@@ -533,7 +532,7 @@ section#projects {
 }
 
 .contact-text ul li img {
-  width: 40px;
+  width: 5rem;
 }
 
 .contact-button {
@@ -586,11 +585,71 @@ footer {
   opacity: 1;
 }
 
-@media (max-width: 480px) {
-  
+@media (max-width: 601px) {
+  html {
+    font-size: 30%;
+  }
+
+  #about {
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  #about > div {
+    width: 100%;
+  }
+
+  .presentation-container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .presentation-container > div {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .desktop-options {
+    display: none;
+  }
+
+  .mobile-options {
+    display: none;
+  }
+
+  .mobile-options ul {
+    display: flex;
+    height: 100%;
+  }
+
+  #contact {
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  .contact-text {
+    width: 100%;
+  }
+
+  .contact-text ul {
+    justify-content: center;
+  }
+
+  .contact-button {
+    width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 601px) and (max-width: 768px) {
   html {
     font-size: 50%;
   }
@@ -665,11 +724,23 @@ footer {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   html {
     font-size: 50%;
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1919px) {}
+@media (min-width: 1919px) {
+  html {
+    font-size: 70%;
+  }
+
+  body {
+    padding: 0 20rem;
+  }
+
+  nav {
+    position: static;
+  }
+}
 
