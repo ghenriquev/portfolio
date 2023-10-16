@@ -647,6 +647,14 @@ footer {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .from-left {
+    transform: translateX(-50%);
+  }
+
+  .from-right {
+    transform: translateX(50%);
+  }
 }
 
 @media (min-width: 601px) and (max-width: 768px) {
