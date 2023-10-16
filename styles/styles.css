@@ -362,7 +362,7 @@ header {
   line-height: 1rem;
 }
 
-section#projects {
+#projects {
   padding: 8rem 15rem;
   background-color: var(--nav-bg);
   color: var(--text);
@@ -587,27 +587,11 @@ footer {
 
 @media (max-width: 601px) {
   html {
-    font-size: 30%;
+    font-size: 40%;
   }
 
-  #about {
-    flex-direction: column;
-    gap: 10rem;
-  }
-
-  #about > div {
-    width: 100%;
-  }
-
-  .presentation-container {
-    flex-direction: column;
-    gap: 5rem;
-  }
-
-  .presentation-container > div {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  #head {
+    padding: 1rem 3rem;
   }
 
   .mobile-menu {
@@ -627,9 +611,39 @@ footer {
     height: 100%;
   }
 
+  #home {
+    padding: 3rem ;
+  }
+
+  #about {
+    flex-direction: column;
+    gap: 10rem;
+    padding: 3rem;
+  }
+
+  #about > div {
+    width: 100%;
+  }
+
+  .presentation-container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .presentation-container > div {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #projects {
+    padding: 3rem;
+  }
+
   #contact {
     flex-direction: column;
     gap: 10rem;
+    padding: 3rem;
   }
 
   .contact-text {
@@ -654,6 +668,10 @@ footer {
 
   .from-right {
     transform: translateX(50%);
+  }
+
+  footer {
+    padding: 3rem;
   }
 }
 
