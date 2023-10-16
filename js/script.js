@@ -25,13 +25,11 @@ function changeAboutFill() {
   actualBelowLine.classList.add('show-blw-line');
 
   if (button.classList.contains('techs')) {
-    console.log('Techs clicked');
     aboutList.innerHTML =
       '<li class="tech-li"><img src="./assets/html-5.png" alt="HTML5-Logo" /></li><li class="tech-li"><img src="./assets/css-3.png" alt="CSS3-Logo" /></li><li class="tech-li"><img src="./assets/js.png" alt="Javascript-Logo" /></li><li class="tech-li"><img src="./assets/jquery.png" alt="jQuery-Logo" /></li><li class="tech-li"><img src="./assets/github2.png" alt="Github-Logo" /></li><li class="tech-li"><img src="./assets/git.png" alt="Git-Logo" /></li>';
   }
 
   if (button.classList.contains('education')) {
-    console.log('Educations clicked');
     aboutList.innerHTML =
       '<li class="edu-li">Análise e Desenvolvimento de Sistemas<br><span class="xs-text ml-3">Faculdade Descomplica - <strong>Cursando</strong></span><br><span class="xs-text ml-3">(Jan, 2023 - Jul, 2025)</span></li>';
   }
@@ -59,7 +57,6 @@ const aboutTechs = document.querySelector('.about-techs');
 const aboutObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      console.log(entry.isIntersecting);
       if (entry.isIntersecting) {
         entry.target.classList.remove('from-left');
         entry.target.classList.remove('from-right');
@@ -105,3 +102,29 @@ const projectsObserver = new IntersectionObserver(
 projectsCard.forEach((card) => {
   projectsObserver.observe(card);
 });
+
+const mobileOptions = document.querySelector('.mobile-options');
+const mobileOptionsDisplay = getComputedStyle(mobileOptions).display;
+const mobileButton = document.querySelector('.mobile-menu-button');
+const mobileLis = document.querySelectorAll('.mobile-option');
+const homeButton = document.querySelector('.home-img');
+
+mobileButton.addEventListener('click', (e) => {
+  if (getComputedStyle(mobileOptions).display === 'none') {
+    mobileOptions.style.display = 'block';
+  } else {
+    mobileOptions.style.display = 'none';
+  }
+});
+
+mobileLis.forEach((mobileOption) => {
+  mobileOption.addEventListener('click', (e) => {
+    mobileOptions.style.display = 'none';
+  });
+});
+
+homeButton.addEventListener('click', () => {
+  if (getComputedStyle(mobileOptions).display === 'block') {
+    mobileOptions.style.display = 'none';
+  }
+})
