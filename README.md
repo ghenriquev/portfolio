@@ -20,8 +20,10 @@ Esse é o meu Portfólio, que inclui os meus principais projetos e tecnologias q
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML e CSS
+- HTML
+- CSS
 - JavaScript
+- jQuery
 - Git e Github
 
 ## 💻 Projeto
